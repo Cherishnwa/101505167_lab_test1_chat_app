@@ -34,8 +34,7 @@ The application supports:
 ---
 
 ## Features Implemented
-<img width="1026" height="920" alt="Screenshot 2026-02-11 193855" src="https://github.com/user-attachments/assets/e0d55fde-86f1-4492-be21-98dc5e46ca54" />
-
+<img width="500" height="300" alt="Screenshot 2026-02-11 193855" src="https://github.com/user-attachments/assets/e0d55fde-86f1-4492-be21-98dc5e46ca54" />
 
 ###  1. User Authentication
 - Signup page with MongoDB storage
@@ -44,6 +43,8 @@ The application supports:
 - Logout functionality
 
 ###  2. Room-Based Messaging
+<img width="500" height="300" alt="Screenshot 2026-02-11 194120" src="https://github.com/user-attachments/assets/dfef22ea-1f27-4619-9314-104853cbafa5" />
+
 - Predefined rooms (DevOps, Cloud, Covid19, Sports, NodeJS)
 - Users can join only one room at a time
 - Leave Room functionality implemented using `socket.leave()`
@@ -57,13 +58,15 @@ The application supports:
 - Displays “User is typing…” when another user is typing in the same room
 
 ###  5. MongoDB Persistence
+<img width="500" height="465" alt="Screenshot 2026-02-11 194644" src="https://github.com/user-attachments/assets/79663600-8b3b-4deb-8da0-1d68827a87ad" />
+
 - All group messages are stored in MongoDB
 - Messages are retrieved when rejoining a room
 - Messages include timestamp
 
 ###  6. Database Schemas
 
-#### User Schema
+#### User Schema & Group Message, 
 ```json
 {
   "_id": "auto-generated",
@@ -72,4 +75,12 @@ The application supports:
   "lastname": "Last",
   "password": "password",
   "createdOn": "Date"
+}
+
+{
+  "_id": "auto-generated",
+  "from_user": "username",
+  "room": "room_name",
+  "message": "message text",
+  "date_sent": "Date"
 }
